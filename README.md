@@ -152,9 +152,9 @@ Youssef Bassil & Aziz Barbar[*] points-out to the fact that these bit-by-bit ope
 
 In other words, they propose that we can
   1. Determine the maximum number of digits allowed by the programming language for a number (16 for JavaScript)
-  2. Divide the strings to chunks with length (16-1=) 15.
-      a. To avoid overflows
-      b. For C#, this value would be 19-1=18
+  2. Divide the strings to chunks with length (16-1=) 15.<br>
+      a. To avoid overflows<br>
+      b. For C#, this value would be 19-1=18<br>
   3. Perform addition / subtraction over these chunks instead of singular bits or singular characters.
   4. Handle carry-out and borrow-in situations over chunks as a whole, instead of singular bits or singular characters.
 
@@ -172,7 +172,7 @@ The corresponding implementations for these methods reside in **/util/bignumber.
 
 We talked about the fact that this custom implementation is only better if input is big enough. And, we already know that algebraic operations are way faster with supported number types.
 
-Hence, it wouldn't make sense to stick to one approach only. We need to analyze the performance difference and implement a **algorithm selection interface** which decides the best option regarding the operands of each operation.
+Hence, it wouldn't make sense to stick to one approach only. We need to analyze the performance difference and implement an **algorithm selection interface** which decides the best option regarding the operands of each operation.
 
 Another thing to mention here is <u>how we will perform the aggregation</u>. At the extremes, we have two options:
 1. Hold an accumulator that holds the total amount of each ticker, and update it with every balance update
