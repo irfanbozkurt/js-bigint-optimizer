@@ -217,7 +217,7 @@ console.timeEnd('Function #2')
 6. 1500 digits
   <u>Function #1: 3866.040ms</u> 
   Function #2: 5937.767ms
-6. 3000 digits
+7. 3000 digits 
   <u>Function #1: 16629.594ms</u> 
   Function #2: 35500.779ms
 
@@ -254,12 +254,8 @@ console.timeEnd('Function #2')
 5. 600 digits
   <u>Function #1: 1864.711ms</u>
   Function #2: 1905.922ms
-7. 800 digits
-  <u>Function #1: 3086.263ms</u> 
-  Function #2: 6182.302ms
-6. 3000 digits
-  <u>Function #1: 18017.343ms</u> 
-  Function #2: 82566.880ms
+6. 800 digits Function #1: 3086.263ms Function #2: 6182.302ms
+7. 3000 digits <u>Function #1: 18017.343ms</u> Function #2: 82566.880ms
 
 So a rough "turnover" point can be <b>600 digits</b> for <b>subtraction</b>.
 
