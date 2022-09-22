@@ -100,7 +100,7 @@ After defining the endpoints and corresponding request formats, we wil discuss h
 
 <br>
 
-- **/userId/<USER_ID>** - GET
+- **/user/<USER_ID>** - GET
   - Returns a JSON containing each ticker a user has, together with corresponding balances.
   - Request body will be ignored
   - <details>
