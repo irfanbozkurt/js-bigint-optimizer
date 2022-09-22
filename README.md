@@ -100,6 +100,26 @@ After defining the endpoints and corresponding request formats, we wil discuss h
 
 <br>
 
+- **/userId/<USER_ID>** - GET
+  - Returns a JSON containing each ticker a user has, together with corresponding balances.
+  - Request body will be ignored
+  - <details>
+    <summary>Example request</summary>
+
+    ``` 
+    $ curl -XGET http://localhost:3000/user/0xacc98
+
+    returns:
+    {
+      "LUNA": "0",
+      "ETH": "2343252454123425345423423",
+      "BTC": "4"
+    }
+    ```
+    </details>
+
+<br>
+
 - **/reset** - POST
   - Removes all data simulating a fresh start.
 
