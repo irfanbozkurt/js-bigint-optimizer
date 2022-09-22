@@ -199,26 +199,26 @@ for(var i = 0; i < iterations; i++ )
     BigInt(a) + BigInt(b);
 console.timeEnd('Function #2') 
 ```
-1. 100 digits
-  Function #1: 622.161ms
+1. 100 digits<br>
+  Function #1: 622.161ms<br>
   <u>Function #2: 211.135ms</u> 
-2. 200 digits
-  Function #1: 1210.932ms
+2. 200 digits<br>
+  Function #1: 1210.932ms<br>
   <u>Function #2: 503.734ms</u> 
-3. 600 digits
-  Function #1: 1961.613ms
+3. 600 digits<br>
+  Function #1: 1961.613ms<br>
   <u>Function #2: 1276.604ms</u> 
-4. 800 digits
-  <u>Function #1: 1707.828ms</u> 
+4. 800 digits<br>
+  <u>Function #1: 1707.828ms</u> <br>
   Function #2: 1802.936ms
-5. 1000 digits
-  <u>Function #1: 2125.183ms</u> 
+5. 1000 digits<br>
+  <u>Function #1: 2125.183ms</u> <br>
   Function #2: 2688.082ms
-6. 1500 digits
-  <u>Function #1: 3866.040ms</u> 
+6. 1500 digits<br>
+  <u>Function #1: 3866.040ms</u> <br>
   Function #2: 5937.767ms
-7. 3000 digits 
-  <u>Function #1: 16629.594ms</u> 
+7. 3000 digits <br>
+  <u>Function #1: 16629.594ms</u> <br>
   Function #2: 35500.779ms
 
 So a rough "turnover" point can be <b>800 digits</b> for <b>addition</b>.
@@ -239,23 +239,27 @@ for(var i = 0; i < iterations; i++ )
 console.timeEnd('Function #2') 
 ```
 
-1. 100 digits
-  Function #1: 408.413ms
+1. 100 digits<br>
+  Function #1: 408.413ms<br>
   <u>Function #2: 223.413ms</u>
-2. 200 digits
-  Function #1: 578.513ms
+2. 200 digits<br>
+  Function #1: 578.513ms<br>
   <u>Function #2: 227.446ms</u>
-3. 300 digits
-  Function #1: 677.271ms
+3. 300 digits<br>
+  Function #1: 677.271ms<br>
   <u>Function #2: 439.742ms</u>
-4. 400 digits
-  Function #1: 1715.926ms
+4. 400 digits<br>
+  Function #1: 1715.926ms<br>
   <u>Function #2: 1595.747ms</u>
-5. 600 digits
-  <u>Function #1: 1864.711ms</u>
+5. 600 digits<br>
+  <u>Function #1: 1864.711ms</u><br>
   Function #2: 1905.922ms
-6. 800 digits Function #1: 3086.263ms Function #2: 6182.302ms
-7. 3000 digits <u>Function #1: 18017.343ms</u> Function #2: 82566.880ms
+6. 800 digits<br> 
+  Function #1: 3086.263ms <br>
+  Function #2: 6182.302ms
+7. 3000 digits <br>
+<u>Function #1: 18017.343ms</u> <br>
+Function #2: 82566.880ms
 
 So a rough "turnover" point can be <b>600 digits</b> for <b>subtraction</b>.
 
