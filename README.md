@@ -1,10 +1,6 @@
 # Introduction
 
-Task definition is clear, and requested functionality is pretty simple when we think inside the box. This application creates the desired interface by using Node + Express, apart from automated request logging with Morgan, and Nodemon for hot-reloading during development.
-
-Problems start when we consider big number arithmetics. Javascript only supports numbers up to a certain number which contains 16 decimals. Numbers greater than this limit cannot make use of hardware-supported arithmetics. 
-
-These numbers must perform arithmetic operations at the software basis, which means the numbers will be "iterated" and the corresponding elementary school rules will be applied. Complexity-wise, it's impossible to do better than this: Complexity will always be O(n) per operation, where n is the average length of the string operands.
+Node + Express application trying to optimize big number addition and subtraction operations. Javascript supports fast arithmetics for up to 16 decimals. Numbers greater than this limit cannot make use of hardware-supported arithmetics. Bigger numbers must perform arithmetic operations at the software basis, which means the bits will be "iterated" and the corresponding elementary school rules will be applied. Complexity-wise, it's impossible to do better than this. Complexity will always be O(n) per operation, where n is the average length of the string operands.
 
 However, we can still improve Theta(n) with a special technique that is proposed by Youssef Bassil & Aziz Barbar of American University of Science, Lebanon.
 
@@ -128,23 +124,18 @@ Application <u>does not persist state</u>. There's NO database connectivity conf
 
 This is mainly because of ease of implementation, and more focusing on algorithmical problems rather than usual processes.
 
-I will later talk about what kind of a database would be suitable for our requirements.
+We will later talk about what kind of a database would be suitable for our requirements.
 
 ---
 
 # The Problem
 
-As discussed before, the biggest problem about this application is big number arithmetics.
-
 Just like every other programming language, JS provides support for big number arithmetics, and big numbers even became a primitive type in JS: <b>bigint</b>.
-
-We can actually get away with using bigint when performing these calculations and storing every numerical value as a string. However, I was curious about the limitations of bigint and if we could somehow improve / fine-tune its performance.
+We can actually get away with using bigint when performing these calculations and storing every numerical value as a string, but here we explore if we could somehow improve / fine-tune its performance.
 
 # How BigInt Works
 
 Being very similar accross different programming languages; BigInteger libraries will first convert the strings to corresponding bit-wise representations, iterate over all the bits, perform elementary-school addition and subtraction, and then convert back to string.
-
-As you can see, complexity of addition and subtraction with this method is O(n), and although it's impossible to change with a sequential algorithm on a software basis, it can be fine-tuned.
 
 # How BigInt Can Be Improved
 
