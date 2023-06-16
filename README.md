@@ -4,9 +4,7 @@ Express application trying to optimize big number addition and subtraction opera
 
 However, we can still improve Theta(n) with a special technique that is proposed by Youssef Bassil & Aziz Barbar of American University of Science, Lebanon.
 
-
-
----
+<br>
 
 <details>
     <summary>Interact Locally</summary>
