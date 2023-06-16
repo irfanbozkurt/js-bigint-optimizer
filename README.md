@@ -11,9 +11,11 @@ However, we can still improve Theta(n) with a special technique that is proposed
 <details>
     <summary>Interact Locally</summary>
 
-    > From root directory
+    From root directory:
+    
     - ```npm i && npm start``` 
-    Application runs on port 3000. set 'PORT' as an environment variable.
+    
+    Application runs on port 3000. You can set a custom 'PORT' as an environment variable.
     
 </details>
 
@@ -128,9 +130,9 @@ However, we can still improve Theta(n) with a special technique that is proposed
 <details>
     <summary>Notice</summary>
 
+<br>
     
 Application <u>does not persist state</u>. All the data is stored in RAM, and restarting will cause loss of everything.
-We will later talk about what kind of a database would be suitable for our requirements.
 
 </details>
 
