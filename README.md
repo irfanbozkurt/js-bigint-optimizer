@@ -1,8 +1,6 @@
 # Introduction
 
-Express application trying to optimize big number addition and subtraction operations. Javascript supports fast arithmetics for up to 16 decimals. Numbers greater than this limit cannot make use of hardware-supported arithmetics. Bigger numbers must perform arithmetic operations at the software basis, which means the bits will be "iterated" and the corresponding elementary school rules will be applied. Complexity-wise, it's impossible to do better than this. Complexity will always be O(n) per operation, where n is the average length of the string operands.
-
-However, we can still improve Theta(n) with a special technique that is proposed by Youssef Bassil & Aziz Barbar of American University of Science, Lebanon.
+Express application trying to optimize big number addition and subtraction operations. Javascript supports fast arithmetics for up to 16 decimals. Numbers greater than this limit cannot make use of hardware-supported arithmetics. Bigger numbers must perform arithmetic operations at the software basis, which means the bits will be iterated and the corresponding elementary school rules will be applied. Complexity-wise, it's impossible to do better than this. Complexity will always be O(n) per operation, where n is the average length of the string operands. However, we can still improve Theta(n)
 
 <br>
 
@@ -137,14 +135,11 @@ Application <u>does not persist state</u>. All the data is stored in RAM, and re
 
 ---
 
-
-# The Problem
-
 JS provides support for big number arithmetics, and big numbers even became a primitive type in JS: <b>bigint</b>. We can actually get away with using bigint when performing these calculations and storing every numerical value as a string, but here we explore if we could somehow improve / fine-tune its performance.
 
 Being very similar accross different programming languages; BigInteger libraries will iterate over all the bits, perform elementary-school addition and subtraction, and then convert the result back to string. Youssef Bassil & Aziz Barbar[*] points-out to the fact that these bit-by-bit operations cost many <u>iterations</u>. Although we have to iterate the strings, we can reduce the number of atomic instructions by leveraging the programming language's typical hardware support for these two basic operations.
 
-# Proposed Optimisation
+# Proposition 
 
 1. Determine the maximum number of digits allowed by the programming language for a number (16 for JavaScript)
 2. Divide the strings to chunks with length (16-1=) 15.<br>
@@ -238,16 +233,14 @@ console.timeEnd('Function #2')
 <u>Function #1: 18017.343ms</u> <br>
 Function #2: 82566.880ms
 
-So a rough "turnover" point can be <b>600 digits</b> for <b>subtraction</b>.
+So a rough turnover point can be <b>600 digits</b> for <b>subtraction</b>.
 
-# Algorithm Decision Mechanism
-
-After this stupid / basic analysis, we come up with the following set of rules:
+After this basic analysis, we come up with the following set of rules:
 1. Use supported numbers when both of the operands are smaller than 16 digits
 2. Use bigint addition / subtraction when number of digits of at least one of the operands is less than 800 / 600.
 3. Use our custom implementation when at least one of the operands is greater than these limits.
 
-Please refer to **/util/algebra.js** to see the interface that makes these decisions and completely abstracts these decisions from the user functions.
+Please refer to **/util/algebra.js** to see the interface that makes these decisions 
 
 # References
 Youssef Bassil & Aziz Barbar<br>
